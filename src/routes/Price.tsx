@@ -74,11 +74,7 @@ interface PriceProps {
   coinId: string;
   tickersData?: PriceData;
 }
-function checkValue(value: number | undefined) {
-  if (value) {
-    return value > 0;
-  }
-}
+
 function Price({ coinId, tickersData }: PriceProps) {
   const [data, setData] = useState<PriceData>();
   const [loading, setLoading] = useState(true);
